@@ -62,7 +62,7 @@ cd C:\Temp\Code-Search\ADO_Server_Diagnostics_2025
 
 .\TriggerCollectionIndexing.ps1 `
   -SQLServerInstance "<SQL_SERVER_INSTANCE>" `
-  -CollectionDatabaseName "AzureDevOps_ApplicationServices" `
+  -CollectionDatabaseName "AzureDevOps_<COLLECTION_NAME>"" `
   -ConfigurationDatabaseName "Tfs_Configuration" `
   -CollectionName "<COLLECTION_NAME>" `
   -EntityType "All"
