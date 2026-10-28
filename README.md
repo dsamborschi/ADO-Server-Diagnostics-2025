@@ -58,7 +58,6 @@ This folder contains PowerShell scripts for managing and troubleshooting search 
 ### 🛠️ **Rebuild Elasticsearch indexes for a specific collection (field-tested)**
 Run from the scripts folder (e.g. `C:\Temp\Code-Search\ADO_Server_Diagnostics_2025`). Use `-EntityType` to limit the rebuild to `Code`, `WorkItem`, `Wiki`, or `All`:
 ```powershell
-cd C:\Temp\Code-Search\ADO_Server_Diagnostics_2025
 
 .\TriggerCollectionIndexing.ps1 `
   -SQLServerInstance "<SQL_SERVER_INSTANCE>" `
