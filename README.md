@@ -55,6 +55,19 @@ This folder contains PowerShell scripts for managing and troubleshooting search 
 .\TriggerCollectionIndexing.ps1 -SQLServerInstance "." -CollectionDatabaseName "AzureDevOps_DefaultCollection" -ConfigurationDatabaseName "AzureDevOps_Configuration" -CollectionName "DefaultCollection" -EntityType "All"
 ```
 
+### 🛠️ **Rebuild Elasticsearch indexes for a specific collection (field-tested)**
+Run from the scripts folder (e.g. `C:\Temp\Code-Search\ADO_Server_Diagnostics_2025`). Use `-EntityType` to limit the rebuild to `Code`, `WorkItem`, `Wiki`, or `All`:
+```powershell
+cd C:\Temp\Code-Search\ADO_Server_Diagnostics_2025
+
+.\TriggerCollectionIndexing.ps1 `
+  -SQLServerInstance "<SQL_SERVER_INSTANCE>" `
+  -CollectionDatabaseName "AzureDevOps_ApplicationServices" `
+  -ConfigurationDatabaseName "Tfs_Configuration" `
+  -CollectionName "<COLLECTION_NAME>" `
+  -EntityType "All"
+```
+
 ### 🎯 **Single repository not searchable**
 ```powershell
 .\Re-IndexingCodeRepository.ps1 -SQLServerInstance "." -CollectionDatabaseName "AzureDevOps_DefaultCollection" -ConfigurationDatabaseName "AzureDevOps_Configuration" -IndexingUnitType "Git_Repository" -CollectionName "DefaultCollection" -RepositoryName "MyProject"
