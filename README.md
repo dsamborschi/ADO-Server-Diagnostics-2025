@@ -2,6 +2,14 @@
 
 This folder contains PowerShell scripts for managing and troubleshooting search functionality in Azure DevOps Server 2025 with Elasticsearch 8.14.
 
+## Fixes and Changes
+
+> **Restored missing `Common.psm1` dependency:** The module is required by `TriggerCollectionIndexing.ps1` and other diagnostics scripts. It was restored from the Azure DevOps Server 2022 diagnostics package and tested with Azure DevOps Server 2025.
+>
+> **Validation (reported):** Collection-level Code Search indexing was successfully triggered with `TriggerCollectionIndexing.ps1`, restoring Code Search functionality for the affected collection.
+>
+> **Keep the toolkit together:** Keep `Common.psm1`, the PowerShell scripts, and their associated SQL scripts in their expected relative locations when downloading or copying the toolkit. The current repository revision does not include the `SqlScripts` directory referenced by `TriggerCollectionIndexing.ps1`; obtain those SQL files from the same toolkit package before running that script.
+
 ## Prerequisites
 
 - **Administrative Access**: Many scripts require administrator privileges
